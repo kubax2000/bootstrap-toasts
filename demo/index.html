@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+        <title>Bootstrap Toasts JS Demo</title>
+        <meta name="keywords" content="Bootstrap,Bootstrap4,Toast">
+        <style>
+            h2 {
+                margin-bottom: 20px;
+            }
+            .card {
+                margin-top: 20px;
+            }
+            .card .list-group {
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header clearfix" style="margin-top: 20px;">
+                <nav>
+                    <ul class="nav nav-pills float-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/kubax2000/bootstrap-toasts-js">GitHub</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h3 class="text-muted">Bootstrap Toasts JS</h3>
+            </div>
+            <hr>
+            <div id="example1"></div>
+            <div class="card">
+                <div class="card-header">
+                    Code
+                </div>
+                <ul class="list-group list-group-flush">
+                    $('#example1').addToast({content: 'Toast content', title: 'Toast title'});
+                </ul>
+            </div>
+            <hr>
+            <h2>Auto hide</h2>
+            <div id="example2"></div>
+            <div class="card">
+                <div class="card-header">
+                    Code
+                </div>
+                <ul class="list-group list-group-flush">
+                    $('#example2').addToast({autoHide: true, content: 'AutoHide Toast -> default displayTime', title: 'AutoHide Toast'});<br>
+                    $('#example2').addToast({autoHide: true, content: 'AutoHide Toast -> 5000 displayTime', displayTime: 5000, title: 'AutoHide Toast'});
+                </ul>
+            </div>
+            <hr>
+            <h2>Not closable</h2>
+            <div id="example3"></div>
+            <div class="card">
+                <div class="card-header">
+                    Code
+                </div>
+                <ul class="list-group list-group-flush">
+                    $('#example3').addToast({closable: false, content: 'Toast content', title: 'Toast title'});
+                </ul>
+            </div>
+            <hr>
+            <h2>Toasts types</h2>
+            <div id="example4"></div>
+            <div class="card">
+                <div class="card-header">
+                    Code
+                </div>
+                <ul class="list-group list-group-flush">
+                    $('#example4').addToast({content: 'Toast content', title: 'Toast - primary', type: 'primary'});<br>
+                    $('#example4').addToast({content: 'Toast content', title: 'Toast - secondary', type: 'secondary'});<br>
+                    $('#example4').addToast({content: 'Toast content', title: 'Toast - success', type: 'success'});<br>
+                    $('#example4').addToast({content: 'Toast content', title: 'Toast - danger', type: 'danger'});<br>
+                    $('#example4').addToast({content: 'Toast content', title: 'Toast - warning', type: 'warning'});<br>
+                    $('#example4').addToast({content: 'Toast content', title: 'Toast - info', type: 'info'});<br>
+                    $('#example4').addToast({content: 'Toast content', title: 'Toast - light', type: 'light'});<br>
+                    $('#example4').addToast({content: 'Toast content', title: 'Toast - dark', type: 'dark'});
+                </ul>
+            </div>
+            <hr>
+            <h2>Language support</h2>
+            <div id="example5"></div>
+            <div class="card">
+                <div class="card-header">
+                    Code
+                </div>
+                <ul class="list-group list-group-flush">
+                    $('#example5').addToast({content: 'Toast content', lang: 'cz', title: 'Language support'});
+                </ul>
+            </div>
+            <hr>
+            <h2>Icons</h2>
+            <div id="example6"></div>
+            <div class="card">
+                <div class="card-header">
+                    Code
+                </div>
+                <ul class="list-group list-group-flush">
+                    $('#example6').addToast({content: 'Toast content', iconClass: 'fas fa-globe-europe', title: 'Icons'});<br>
+                    $('#example6').addToast({content: 'Toast content', iconImgSrc: 'world-icon.png', title: 'Icons'});
+                </ul>
+            </div>
+            <hr>
+            <h2>Bootstrap .toast()</h2>
+            <div id="example7"></div>
+            <div class="card">
+                <div class="card-header">
+                    Code
+                </div>
+                <ul class="list-group list-group-flush">
+                    let toast = $('#example7').addToast({content: 'Toast content', show: false, title: 'Toast title'});<br>
+                    toast.toast('show');
+                </ul>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="../dist/js/bootstrap-toasts-js.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#example1').addToast({content: 'Toast content', title: 'Toast title'});
+
+                $('#example2').addToast({autoHide: true, content: 'AutoHide Toast -> default displayTime', title: 'AutoHide Toast'});
+                $('#example2').addToast({autoHide: true, content: 'AutoHide Toast -> 5000 displayTime', displayTime: 5000, title: 'AutoHide Toast'});
+
+                $('#example3').addToast({closable: false, content: 'Toast content', title: 'Toast title'});
+
+                $('#example4').addToast({content: 'Toast content', title: 'Toast - primary', type: 'primary'});
+                $('#example4').addToast({content: 'Toast content', title: 'Toast - secondary', type: 'secondary'});
+                $('#example4').addToast({content: 'Toast content', title: 'Toast - success', type: 'success'});
+                $('#example4').addToast({content: 'Toast content', title: 'Toast - danger', type: 'danger'});
+                $('#example4').addToast({content: 'Toast content', title: 'Toast - warning', type: 'warning'});
+                $('#example4').addToast({content: 'Toast content', title: 'Toast - info', type: 'info'});
+                $('#example4').addToast({content: 'Toast content', title: 'Toast - light', type: 'light'});
+                $('#example4').addToast({content: 'Toast content', title: 'Toast - dark', type: 'dark'});
+
+                $('#example5').addToast({content: 'Toast content', lang: 'cz', title: 'Language support'});
+
+                $('#example6').addToast({content: 'Toast content', iconClass: 'fas fa-globe-europe', title: 'Icons'});
+                $('#example6').addToast({content: 'Toast content', iconImgSrc: 'world-icon.png', title: 'Icons'});
+
+                let toast = $('#example7').addToast({content: 'Toast content', show: false, title: 'Toast title'});
+                toast.toast('show');
+            });
+        </script>
+    </body>
+</html>

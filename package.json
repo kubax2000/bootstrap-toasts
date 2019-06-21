@@ -1,0 +1,27 @@
+{
+  "author": "kubax2000",
+  "bugs": {
+    "url": "https://github.com/kubax2000/bootstrap-toasts-js/issues"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1"
+  },
+  "description": "JS extension for bootstrap toasts",
+  "homepage": "https://github.com/kubax2000/bootstrap-toasts-js#readme",
+  "keywords": [
+    "bootstrap",
+    "toasts"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "bootstrap-toasts-js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kubax2000/bootstrap-toasts-js.git"
+  },
+  "scripts": {
+    "test": "$('body').addToast({content: 'Hello world!', title: 'First Toast'});"
+  },
+  "version": "1.0.3"
+}
