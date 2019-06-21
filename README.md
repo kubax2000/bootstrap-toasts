@@ -25,7 +25,7 @@ $('body').addToast({content: 'Hello world!', title: 'First Toast'});
 
 ## Demo 
 
-<a href="https://github.com/kubax2000/bootstrap-toasts-js/demo/index.html" target="_blank" title="bootstrap-toasts-js">https://github.com/kubax2000/bootstrap-toasts-js/demo/index.html</a>
+<a href="https://kubax2000.github.io/bootstrap-toasts-js/" target="_blank" title="bootstrap-toasts-js">https://kubax2000.github.io/bootstrap-toasts-js/</a>
 
 ## Parameter Description
 
