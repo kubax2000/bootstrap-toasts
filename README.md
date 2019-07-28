@@ -24,7 +24,7 @@ npm install bootstrap-toasts-js --save
 $('body').addToast({content: 'Hello world!', title: 'First Toast'});
 
 // Toast confirm box
-$('#example2').addConfirmToast({buttons: [{content: 'Yes', onClick: () => {alert('Thanks!!')}},{content: 'Definitely yes!', onClick: () => {alert('Thanks you so much!!')}, type: 'danger'}],content: 'Do you like bootstrap-toasts-js?', title: 'Guestion of life', type: 'success'});
+$('#example2').addConfirmToast({buttons: [{content: 'Yes', onClick: () => {alert('Thanks!!')}},{content: 'Definitely yes!', onClick: () => {alert('Thanks you so much!!')}, type: 'danger'}],content: 'Do you like bootstrap-toasts-js?', title: 'Question of life', type: 'success'});
 ```
 
 ## Demo 
