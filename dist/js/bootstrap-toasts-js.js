@@ -1,7 +1,9 @@
+/* Bootstrap Toasts JS v1.1.1 | Author: Jakub Marek | Date: 28.08.2019 22:30 */
+
 $(function(){
     let GLOBAL = {
-        newToastId: 0,
-        toasts: []
+        'newToastId': 0,
+        'toasts': []
     };
     function applyDefaultOptions(options, defaults) {
         let newOptions = options;
@@ -30,8 +32,8 @@ $(function(){
     }
     function getWordTimeDifference(time, lang) {
         const DICTIONARY = {
-            en:{after:' ago',before:'',second:'second',seconds:'seconds',minute:'minute',minutes:'minutes',hour:'hour',hours:'hour',day:'day',days:'days'},
-            cz:{after:'',before:'Před ',second:'sekundou',seconds:'sekundami',minute:'minutou',minutes:'minutami',hour:'hodinou',hours:'hodinami',day:'dnem',days:'dny'}
+            'en':{'after':' ago','before':'','second':'second','seconds':'seconds','minute':'minute','minutes':'minutes','hour':'hour','hours':'hour','day':'day','days':'days'},
+            'cz':{'after':'','before':'Před ','second':'sekundou','seconds':'sekundami','minute':'minutou','minutes':'minutami','hour':'hodinou','hours':'hodinami','day':'dnem','days':'dny'}
         };
         if(undefined === DICTIONARY[lang]) {
             throw 'language ' + lang + ' is not supported';
@@ -63,44 +65,44 @@ $(function(){
             jQuery.fn.extend({
                 addConfirmToast: function (options) {
                     const DEFAULTS = {
-                        autoDestroy: false,
-                        autoHide: false,
-                        buttons: [
+                        'autoDestroy': false,
+                        'autoHide': false,
+                        'buttons': [
                             {
-                                content: 'Ok',
-                                default: true,
-                                onClick: null,
-                                type: 'success'
+                                'content': 'Ok',
+                                'default': true,
+                                'onClick': null,
+                                'type': 'success'
                             }
                         ],
-                        buttonsAlign: 'right',
-                        closable: true,
-                        closeAction: 'destroy',
-                        createdTime: new Date(),
-                        displayTime: 2000,
-                        elementId: 'toast-' + GLOBAL.newToastId,
-                        fadeOutAnimation: true,
-                        fadeOutDelay: 500,
-                        headerClasses: function(options){ return ((['dark','danger','info','primary','secondary','success','warning'].indexOf(options.type) !== -1) ? ' text-white' : '') +  ' bg-' + options.type; },
-                        iconClass: null,
-                        iconImgSrc: null,
-                        iconImgStyles: 'height: 20px; width: 20px;',
-                        lang: 'en',
-                        onAutoClose: null,
-                        onClose: null,
-                        onEnter: null,
-                        onHide: null,
-                        progress: {
-                            animated: false,
-                            bgColor: null,
-                            show: true,
-                            stripped: false,
-                            type: 'primary'
+                        'buttonsAlign': 'right',
+                        'closable': true,
+                        'closeAction': 'destroy',
+                        'createdTime': new Date(),
+                        'displayTime': 2000,
+                        'elementId': 'toast-' + GLOBAL.newToastId,
+                        'fadeOutAnimation': true,
+                        'fadeOutDelay': 500,
+                        'headerClasses': function(options){ return (['dark','danger','info','primary','secondary','success','warning'].indexOf(options.type) !== -1 ? ' text-white' : '') + ' bg-' + options.type; },
+                        'iconClass': null,
+                        'iconImgSrc': null,
+                        'iconImgStyles': 'height: 20px; width: 20px;',
+                        'lang': 'en',
+                        'onAutoClose': null,
+                        'onClose': null,
+                        'onEnter': null,
+                        'onHide': null,
+                        'progress': {
+                            'animated': false,
+                            'bgColor': null,
+                            'show': true,
+                            'stripped': false,
+                            'type': 'primary'
                         },
-                        show: true,
-                        showTimeLabel: true,
-                        timeout: null,
-                        type: 'default'
+                        'show': true,
+                        'showTimeLabel': true,
+                        'timeout': null,
+                        'type': 'default'
                     };
                     options = applyDefaultOptions(options, DEFAULTS);
                     GLOBAL.toasts[GLOBAL.newToastId] = options;
@@ -122,7 +124,7 @@ $(function(){
                         '<div class="toast-body" style="text-align: ' + options.buttonsAlign + ';">' + htmlButtons + '</div>' +
                         '</div>');
                     let newToastEl = $(this).find(options.elementId);
-                    newToastEl.toast({animation: options.fadeOutAnimation, autohide: false, delay: options.fadeOutDelay});
+                    newToastEl.toast({'animation': options.fadeOutAnimation, 'autohide': false, 'delay': options.fadeOutDelay});
                     newToastEl.toast((options.show) ? 'show' : 'hide');
                     for(let i = 0; i < options.buttons.length; i++) {
                         $('#toast-' + GLOBAL.newToastId + '-button-' + i).on('click', function(e) {
@@ -152,7 +154,7 @@ $(function(){
                                 options.onAutoClose(options);
                             }
                             for(let i = 0; i < options.buttons.length; i++) {
-                                if(options.buttons[i].default && !isEmpty(options.buttons[i].onClick)) {
+                                if(options.buttons[i]['default'] && !isEmpty(options.buttons[i].onClick)) {
                                     options.buttons[i].onClick(options);
                                 }
                             }
@@ -173,7 +175,7 @@ $(function(){
                                 options.onClose(options);
                             } else {
                                 for(let i = 0; i < options.buttons.length; i++) {
-                                    if(options.buttons[i].default && !isEmpty(options.buttons[i].onClick)) {
+                                    if(options.buttons[i]['default'] && !isEmpty(options.buttons[i].onClick)) {
                                         options.buttons[i].onClick(options);
                                     }
                                 }
@@ -195,34 +197,34 @@ $(function(){
                 },
                 addToast: function (options) {
                     const DEFAULTS = {
-                        autoDestroy: false,
-                        autoHide: false,
-                        closable: true,
-                        closeAction: 'destroy',
-                        createdTime: new Date(),
-                        displayTime: 2000,
-                        elementId: 'toast-' + GLOBAL.newToastId,
-                        fadeOutAnimation: true,
-                        fadeOutDelay: 500,
-                        headerClasses: function(options){ return ((['dark','danger','info','primary','secondary','success','warning'].indexOf(options.type) !== -1) ? ' text-white' : '') +  ' bg-' + options.type; },
-                        iconClass: null,
-                        iconImgSrc: null,
-                        iconImgStyles: 'height: 20px; width: 20px;',
-                        lang: 'en',
-                        onAutoClose: null,
-                        onClose: null,
-                        onHide: null,
-                        progress: {
-                            animated: false,
-                            bgColor: null,
-                            show: true,
-                            stripped: false,
-                            type: 'primary'
+                        'autoDestroy': false,
+                        'autoHide': false,
+                        'closable': true,
+                        'closeAction': 'destroy',
+                        'createdTime': new Date(),
+                        'displayTime': 2000,
+                        'elementId': 'toast-' + GLOBAL.newToastId,
+                        'fadeOutAnimation': true,
+                        'fadeOutDelay': 500,
+                        'headerClasses': function(options){ return ((['dark','danger','info','primary','secondary','success','warning'].indexOf(options.type) !== -1) ? ' text-white' : '') +  ' bg-' + options.type; },
+                        'iconClass': null,
+                        'iconImgSrc': null,
+                        'iconImgStyles': 'height: 20px; width: 20px;',
+                        'lang': 'en',
+                        'onAutoClose': null,
+                        'onClose': null,
+                        'onHide': null,
+                        'progress': {
+                            'animated': false,
+                            'bgColor': null,
+                            'show': true,
+                            'stripped': false,
+                            'type': 'primary'
                         },
-                        show: true,
-                        showTimeLabel: true,
-                        timeout: null,
-                        type: 'default'
+                        'show': true,
+                        'showTimeLabel': true,
+                        'timeout': null,
+                        'type': 'default'
                     };
                     options = applyDefaultOptions(options, DEFAULTS);
                     GLOBAL.toasts[GLOBAL.newToastId] = options;
@@ -238,7 +240,7 @@ $(function(){
                             '<div class="toast-body">' + options.content + '</div>' +
                             '</div>');
                     let newToastEl = $(this).find(options.elementId);
-                    newToastEl.toast({animation: options.fadeOutAnimation, autohide: false, delay: options.fadeOutDelay});
+                    newToastEl.toast({'animation': options.fadeOutAnimation, 'autohide': false, 'delay': options.fadeOutDelay});
                     newToastEl.toast((options.show) ? 'show' : 'hide');
                     if(options.autoDestroy || options.autoHide) {
                         GLOBAL.toasts[GLOBAL.newToastId].timeout = setTimeout(function() {
