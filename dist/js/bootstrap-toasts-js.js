@@ -1,4 +1,4 @@
-/* Bootstrap Toasts JS v1.1.1 | Author: Jakub Marek | Date: 28.08.2019 22:30 */
+/* Bootstrap Toasts JS v1.1.4 | Author: Jakub Marek | Date: 14.9.2019 8:20 */
 
 $(function(){
     let GLOBAL = {
