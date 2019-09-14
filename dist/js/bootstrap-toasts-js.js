@@ -71,7 +71,7 @@ $(function(){
                             {
                                 'content': 'Ok',
                                 'default': true,
-                                'onClick': null,
+                                'onClick': undefined,
                                 'type': 'success'
                             }
                         ],
@@ -84,24 +84,24 @@ $(function(){
                         'fadeOutAnimation': true,
                         'fadeOutDelay': 500,
                         'headerClasses': function(options){ return (['dark','danger','info','primary','secondary','success','warning'].indexOf(options.type) !== -1 ? ' text-white' : '') + ' bg-' + options.type; },
-                        'iconClass': null,
-                        'iconImgSrc': null,
+                        'iconClass': undefined,
+                        'iconImgSrc': undefined,
                         'iconImgStyles': 'height: 20px; width: 20px;',
                         'lang': 'en',
-                        'onAutoClose': null,
-                        'onClose': null,
-                        'onEnter': null,
-                        'onHide': null,
+                        'onAutoClose': undefined,
+                        'onClose': undefined,
+                        'onEnter': undefined,
+                        'onHide': undefined,
                         'progress': {
                             'animated': false,
-                            'bgColor': null,
+                            'bgColor': undefined,
                             'show': true,
                             'stripped': false,
                             'type': 'primary'
                         },
                         'show': true,
                         'showTimeLabel': true,
-                        'timeout': null,
+                        'timeout': undefined,
                         'type': 'default'
                     };
                     options = applyDefaultOptions(options, DEFAULTS);
@@ -123,7 +123,7 @@ $(function(){
                         '<hr style="margin: 0;">' +
                         '<div class="toast-body" style="text-align: ' + options.buttonsAlign + ';">' + htmlButtons + '</div>' +
                         '</div>');
-                    let newToastEl = $(this).find(options.elementId);
+                    let newToastEl = $(this).find('#' + options.elementId);
                     newToastEl.toast({'animation': options.fadeOutAnimation, 'autohide': false, 'delay': options.fadeOutDelay});
                     newToastEl.toast((options.show) ? 'show' : 'hide');
                     for(let i = 0; i < options.buttons.length; i++) {
@@ -207,23 +207,23 @@ $(function(){
                         'fadeOutAnimation': true,
                         'fadeOutDelay': 500,
                         'headerClasses': function(options){ return ((['dark','danger','info','primary','secondary','success','warning'].indexOf(options.type) !== -1) ? ' text-white' : '') +  ' bg-' + options.type; },
-                        'iconClass': null,
-                        'iconImgSrc': null,
+                        'iconClass': undefined,
+                        'iconImgSrc': undefined,
                         'iconImgStyles': 'height: 20px; width: 20px;',
                         'lang': 'en',
-                        'onAutoClose': null,
-                        'onClose': null,
-                        'onHide': null,
+                        'onAutoClose': undefined,
+                        'onClose': undefined,
+                        'onHide': undefined,
                         'progress': {
                             'animated': false,
-                            'bgColor': null,
+                            'bgColor': undefined,
                             'show': true,
                             'stripped': false,
                             'type': 'primary'
                         },
                         'show': true,
                         'showTimeLabel': true,
-                        'timeout': null,
+                        'timeout': undefined,
                         'type': 'default'
                     };
                     options = applyDefaultOptions(options, DEFAULTS);
@@ -239,7 +239,7 @@ $(function(){
                             ((options.progress.show && (options.autoDestroy || options.autoHide)) ? '<div class="btj-progress bg-' + options.progress.type + ((options.progress.stripped) ? ' progress-bar-striped' : '') + ((options.progress.animated) ? ' progress-bar-animated' : '') + '" style="' + ((!isEmpty(options.progress.bgColor)) ? 'background-color: ' + options.progress.bgColor + '; ' : '') + 'height: 5px; width: 100%;"></div>' : '') +
                             '<div class="toast-body">' + options.content + '</div>' +
                             '</div>');
-                    let newToastEl = $(this).find(options.elementId);
+                    let newToastEl = $(this).find('#' + options.elementId);
                     newToastEl.toast({'animation': options.fadeOutAnimation, 'autohide': false, 'delay': options.fadeOutDelay});
                     newToastEl.toast((options.show) ? 'show' : 'hide');
                     if(options.autoDestroy || options.autoHide) {
