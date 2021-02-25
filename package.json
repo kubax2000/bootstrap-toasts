@@ -16,7 +16,7 @@
     "toasts"
   ],
   "license": "ISC",
-  "main": "index.js",
+  "main": "dist/js/bootstrap-toasts-js.js",
   "name": "bootstrap-toasts-js",
   "repository": {
     "type": "git",
