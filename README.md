@@ -1,7 +1,7 @@
 # Bootstrap Toasts
 This library allows you create <a href="https://getbootstrap.com/docs/4.3/components/toasts/" title="Toasts">toasts</a> by JavaScript.
 
-##Install
+## Install
 
 ```
 npm install bootstrap-toasts-js --save
@@ -33,7 +33,7 @@ $('#example2').addConfirmToast({buttons: [{content: 'Yes', onClick: () => {alert
 
 ## Parameter Description
 
-###Global
+### Global
 
 - **autoDestroy**: boolean <i>(default: false)</i> - Enable toast remove after displayTime
 - **autoHide**: boolean <i>(default: false)</i> - Enable toast hide after displayTime
@@ -64,7 +64,7 @@ $('#example2').addConfirmToast({buttons: [{content: 'Yes', onClick: () => {alert
 - **title**: string <i>(required)</i> - Title of toast
 - **type**: string <i>(default: "default")</i> ["success","warning","danger",...] - Type of toast
 
-###AddConfirmToast
+### AddConfirmToast
 
 - **buttons**: array - Array of options objects
   - **content**: string <i>(required)</i> - Content of button
